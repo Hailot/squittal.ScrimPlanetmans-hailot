@@ -36,7 +36,7 @@ namespace squittal.ScrimPlanetmans.CensusStream
         {
             _logger = logger;
 
-            CensusServiceKey = Environment.GetEnvironmentVariable("DaybreakGamesServiceKey", EnvironmentVariableTarget.User);
+            CensusServiceKey = "PlanetsideBattles";
         }
 
         private Func<string, Task> _onMessage;

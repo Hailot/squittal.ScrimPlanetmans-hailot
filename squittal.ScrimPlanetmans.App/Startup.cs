@@ -48,7 +48,7 @@ namespace squittal.ScrimPlanetmans.App
 
 
             services.AddCensusServices(options =>
-                options.CensusServiceId = Environment.GetEnvironmentVariable("DaybreakGamesServiceKey", EnvironmentVariableTarget.User));
+                options.CensusServiceId = "PlanetsideBattles");
             services.AddCensusHelpers();
 
             services.AddSingleton<IDbContextHelper, DbContextHelper>();
@@ -122,7 +122,7 @@ namespace squittal.ScrimPlanetmans.App
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+         //   app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();

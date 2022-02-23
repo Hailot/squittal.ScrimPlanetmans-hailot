@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+    squittal.scrimplanetmans.app:
+        image: ${DOCKER_REGISTRY-}squittalscrimplanetmans
+        build:
+          context: .
+          dockerfile: squittal.ScrimPlanetmans.App/Dockerfile
+        command: "dotnet run --verbosity m --configuration Release --project 'squittal.ScrimPlanetmans.App.csproj'"
+        ports:
+            - "80:5000"
